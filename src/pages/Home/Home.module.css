@@ -1,0 +1,73 @@
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  min-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.imgThumb {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  height: 250px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+}
+
+.infoCardWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 5px;
+}
+
+.infoText {
+  font-size: 16px;
+  color: var(--text-grey-clr);
+}
+
+.dateInfo {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-special-clr);
+}
+
+.linkInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-special-clr);
+  background-color: var(--text-clr-black);
+  border: 2px solid var(--text-clr-light-grey);
+}
+
+.linkInfoWrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}

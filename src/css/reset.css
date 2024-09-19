@@ -41,14 +41,14 @@ img {
   height: auto;
 }
 
-/* Дополнительные полезные стили сброса */
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; /* Установите шрифт по умолчанию */
+  font-family: sans-serif; 
   box-sizing: border-box;
-  height: auto; /* Если height: 100% установлено, замените на auto */
-  overflow: auto; /* Убедитесь, что overflow не установлен в hidden */
+  height: auto; 
+  /* overflow: auto;  */
 }
 
 *, *::before, *::after {

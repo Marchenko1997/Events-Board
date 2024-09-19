@@ -1,0 +1,100 @@
+.authWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
+  border: 0.5px solid var(--text-clr-black);
+  background-color: #f5f5f5;
+  margin-bottom: 15px;
+}
+
+.authHeader {
+  font-size: 32px;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--text-clr-black);
+}
+
+.authLabel {
+  font-size: 16px;
+  color: var(--text-clr-black);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputWithIconWrap {
+  position: relative;
+  width: 100%;
+}
+
+.inputWithIcon {
+  width: 320px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
+  border: 0.5px solid var(--text-clr-black);
+  background-color: #f5f5f5;
+  margin-bottom: 15px;
+}
+
+.svgEye {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-clr-black);
+}
+
+.submitBtn {
+  width: 240px;
+  height: 45px;
+  border-radius: 12px;
+  font-size: 18px;
+  color: var(--text-clr-black);
+  background-color: #808080;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background-color: var(--text-clr-second-light-grey);
+  border: 1px solid var(--text-clr-black);
+}
+
+.authText {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.authLink {
+  color: var(--text-special-clr);
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.svgEye {
+  cursor: pointer;
+}
+
+.svgWrap {
+  position: relative;
+}
+
+.svgSpan {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}

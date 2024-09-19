@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addParticipant } from "../../redux/participants/operation";
+import { addParticipant } from "../../redux/participants/operations";
 import { failedNotification } from "../../services/notifications";
 import { selectEventDetails } from "../../redux/events/selectors";
 import { selectUser } from "../../redux/auth/selectors";

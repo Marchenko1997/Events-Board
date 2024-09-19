@@ -1,0 +1,103 @@
+.particWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.particList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .particList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.particItem {
+  display: flex;
+  gap: 30px;
+  width: 300px;
+}
+
+.particInfoWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.particImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.particName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .particName {
+    font-size: 24px;
+  }
+}
+
+.noParticText {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.particHeader {
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .particHeader {
+    font-size: 30px;
+  }
+}
+
+.eventHeader {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-special-clr); 
+  text-shadow: 1px 1px 2px black;
+}
+
+@media (min-width: 768px) {
+  .eventHeader {
+    font-size: 30px;
+  }
+}
+
+.returnBackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black;
+  border-radius: 12px;
+  color: var(--text-special-clr); 
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+@media (min-width: 768px) {
+  .returnBackBtn {
+    width: 200px;
+    font-size: 20px;
+  }
+}

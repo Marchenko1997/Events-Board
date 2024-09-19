@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router";
 import { fetchEventById } from "../../redux/events/operations";
 import { selectEventDetails } from "../../redux/events/selectors";
 import css from "./Event.module.css"; // Подключение CSS модулей
-import { ReturnBackBtn } from "../Register/Register.styled";
 
 const Event = () => {
   const { id } = useParams();
@@ -18,11 +17,12 @@ const Event = () => {
 
   return (
     <div>
-      <ReturnBackBtn onClick={() => navigate(-1)}>Return back</ReturnBackBtn>
+      {/* Заменяем ReturnBackBtn на класс из модуля */}
+      <button className={css.returnBackBtn} onClick={() => navigate(-1)}>
+        Return back
+      </button>
       {Object.keys(eventDetails).length > 0 && (
         <div className={css.eventWrap}>
-          {" "}
-          {/* Использование стилей из модуля */}
           <div className={css.imageWrap}>
             <img
               className={css.eventImg}

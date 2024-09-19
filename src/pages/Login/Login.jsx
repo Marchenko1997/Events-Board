@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <div className={css.authForm}>
-      <form onSubmit={handleSubmit(logIn)}>
+      <form onSubmit={handleSubmit(logIn)} className={css.form}>
         <h2 className={css.authHeader}>Log In</h2>
         <label className={css.authLabel}>
           Enter your email

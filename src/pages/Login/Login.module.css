@@ -1,0 +1,70 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.authHeader {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.authLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authText {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.authLink {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: grey;
+  color: #ff5722;
+}
+
+.svgWrap {
+  position: relative;
+}
+
+.svgSpan {
+  position: absolute;
+  top: 40px;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.svgEye {
+  width: 24px;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.submitBtn {
+  width: 300px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background-color: lightgrey;
+  border: 1px solid black;
+}

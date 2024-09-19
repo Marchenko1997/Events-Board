@@ -1,5 +1,4 @@
 .header {
-  position: fixed;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -76,3 +75,7 @@
 .section {
   padding: 20px;
 }
+ .nav {
+    display: flex;
+    gap: 15px;
+ }

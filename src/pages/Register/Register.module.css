@@ -1,0 +1,67 @@
+.registerWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.radioBtnLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.submitBtn {
+  width: 300px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background-color: lightgrey;
+  border: 1px solid black;
+}
+
+.returnBackBtn {
+  width: 150px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: yellow;
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.registerText {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.registerQuestion {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}

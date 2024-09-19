@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout/Layout";
-import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import { lazy } from "react";
 
 const Home = lazy(() => import("./pages/Home/Home"));

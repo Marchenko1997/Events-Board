@@ -12,7 +12,7 @@ import { ToastContainer } from "react-toastify";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/events-board/">
+    <BrowserRouter >
       <PersistGate persistor={persistor}>
         <Provider store={store}>
           <App />

@@ -1,0 +1,97 @@
+.eventWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.eventInfoWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.imageWrap {
+  min-width: 200px;
+}
+
+.eventImg {
+  width: 100%;
+}
+
+.eventHeader {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.eventTitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.eventText {
+  font-size: 16px;
+  color: grey;
+  text-align: justify;
+}
+
+.eventDate {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6347; /* Замена на валидный цвет */
+}
+
+.eventLinkWrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.eventLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: #ff6347; /* Замена на валидный цвет */
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .eventWrap {
+    flex-direction: row;
+  }
+
+  .imageWrap {
+    min-width: 350px;
+  }
+
+  .eventHeader {
+    font-size: 30px;
+  }
+
+  .eventTitle {
+    font-size: 24px;
+  }
+
+  .eventText {
+    font-size: 20px;
+  }
+
+  .eventLinkWrap {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eventLinkWrap {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 button {
@@ -8,6 +9,7 @@ button {
   color: inherit;
   border-width: 0;
   padding: 0;
+  cursor: pointer; /* Убедитесь, что кнопки имеют курсор указателя */
 }
 
 ul,
@@ -38,3 +40,26 @@ img {
   width: 100%;
   height: auto;
 }
+
+/* Дополнительные полезные стили сброса */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Установите шрифт по умолчанию */
+  box-sizing: border-box;
+  height: auto; /* Если height: 100% установлено, замените на auto */
+  overflow: auto; /* Убедитесь, что overflow не установлен в hidden */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+

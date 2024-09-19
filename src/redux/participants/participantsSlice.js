@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { addParticipant, fetchAllParticipantsByEventId } from "./operation";
+import { addParticipant, fetchAllParticipantsByEventId } from "./operations";
 
 const participantsSlice = createSlice({
   name: "participants",

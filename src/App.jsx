@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Route, Routes } from "react-router";
+import Layout from "./components/Layout/Layout";
+import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Event = lazy(() => import("./pages/Event/Event"));
+const Register = lazy(() => import("./pages/Register/Register"));
+const Participants = lazy(() => import("./pages/Participants/Participants"));
+const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
+const Login = lazy(() => import("./pages/Login/Login"));
+const User = lazy(() => import("./pages/User/User"));
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/user-events"
+          element={<PrivateRoute component={<User />} />}
+        />
+        <Route path="/:id/participants" element={<Participants />} />
+        <Route path="/register/:id" element={<Register />} />
+        <Route path="/event-details/:id" element={<Event />} />
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;

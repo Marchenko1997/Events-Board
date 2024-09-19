@@ -1,5 +1,5 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "";
+axios.defaults.baseURL = "https://event-board-backend.onrender.com/";
 
 export const LIMIT_NUMBER = 6;

@@ -9,17 +9,20 @@ import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalStyle } from "./css/index.js";
 import { ToastContainer } from "react-toastify";
+import { StyleSheetManager } from "styled-components";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter >
-      <PersistGate persistor={persistor}>
-        <Provider store={store}>
-          <App />
-          <GlobalStyle />
-          <ToastContainer />
-        </Provider>
-      </PersistGate>
-    </BrowserRouter>
+    <StyleSheetManager>
+      <BrowserRouter>
+        <PersistGate persistor={persistor}>
+          <Provider store={store}>
+            <App />
+            <GlobalStyle />
+            <ToastContainer />
+          </Provider>
+        </PersistGate>
+      </BrowserRouter>
+    </StyleSheetManager>
   </React.StrictMode>
 );

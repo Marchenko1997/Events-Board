@@ -68,10 +68,6 @@
   }
 }
 
-.mainContainer {
-  margin-top: 60px; /* или любое значение для отступа под фиксированный header */
-}
-
 .section {
   padding: 20px;
 }

@@ -4,6 +4,7 @@ import storage from "redux-persist/lib/storage";
 import { eventsReducer } from "./events/eventsSlice";
 import { authReducer } from "./auth/authSlice";
 import { participantsReducer } from "./participants/participantsSlice";
+import filterReducer from "./filter/filterSlice"; 
 
 const eventsPersistConfig = {
   key: "data",
@@ -23,10 +24,18 @@ const participantsPersistConfig = {
   whitelist: ["participants"],
 };
 
+
+const filterPersistConfig = {
+  key: "filters",
+  storage,
+  whitelist: ["title", "eventDate", "organizer"], 
+};
+
 const rootReducer = combineReducers({
   data: persistReducer(eventsPersistConfig, eventsReducer),
   user: persistReducer(userPersistConfig, authReducer),
   participants: persistReducer(participantsPersistConfig, participantsReducer),
+  filters: persistReducer(filterPersistConfig, filterReducer), 
 });
 
 export const store = configureStore({

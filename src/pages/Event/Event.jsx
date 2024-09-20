@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { fetchEventById } from "../../redux/events/operations";
 import { selectEventDetails } from "../../redux/events/selectors";
-import css from "./Event.module.css"; // Подключение CSS модулей
+import css from "./Event.module.css"; 
 
 const Event = () => {
   const { id } = useParams();
@@ -17,7 +17,7 @@ const Event = () => {
 
   return (
     <div>
-      {/* Заменяем ReturnBackBtn на класс из модуля */}
+    
       <button className={css.returnBackBtn} onClick={() => navigate(-1)}>
         Return back
       </button>

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 40px;
 }
 
 .particList {
@@ -10,12 +11,24 @@
   gap: 20px;
 }
 
+
+.searchInput {
+  width: 300px;
+}
+
 @media (min-width: 768px) {
   .particList {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+}
+
+.searchInput {
+  width: 300px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
 }
 
 .particItem {
@@ -70,8 +83,15 @@
 .eventHeader {
   font-size: 20px;
   font-weight: bold;
-  color: var(--text-special-clr); 
+  color: var(--text-special-clr);
   text-shadow: 1px 1px 2px black;
+}
+
+.searchInput {
+  width: 320px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +110,7 @@
   font-size: 20px;
   text-shadow: 1px 1px 2px black;
   border-radius: 12px;
-  color: var(--text-special-clr); 
+  color: var(--text-special-clr);
   background-color: transparent;
   border: 2px solid black;
 }
@@ -99,5 +119,13 @@
   .returnBackBtn {
     width: 200px;
     font-size: 20px;
+  }
+
+  .particWrap {
+    margin-top: 40px;
+  }
+
+  .inputContainer {
+    margin-top: 40px;
   }
 }

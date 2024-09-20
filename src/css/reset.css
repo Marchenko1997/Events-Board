@@ -9,7 +9,7 @@ button {
   color: inherit;
   border-width: 0;
   padding: 0;
-  cursor: pointer; /* Убедитесь, что кнопки имеют курсор указателя */
+  cursor: pointer; 
 }
 
 ul,
@@ -48,7 +48,6 @@ body, html {
   font-family: sans-serif; 
   box-sizing: border-box;
   height: auto; 
-  /* overflow: auto;  */
 }
 
 *, *::before, *::after {

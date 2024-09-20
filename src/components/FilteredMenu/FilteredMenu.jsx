@@ -1,5 +1,4 @@
-import { useState } from "react";
-import css from "./FilteredMenu.module.css"; 
+import css from "./FilteredMenu.module.css";
 
 const FilteredMenu = ({
   titleFilter,
@@ -15,8 +14,8 @@ const FilteredMenu = ({
         <p className={css.text}>Title</p>
         <input
           value={titleFilter}
-          onChange={handleTitleChange} 
-          className={css.input} 
+          onChange={handleTitleChange}
+          className={css.input}
           placeholder="Filter by title"
         />
       </li>
@@ -25,18 +24,17 @@ const FilteredMenu = ({
         <p className={css.text}>Event Date</p>
         <input
           value={dateFilter}
-          onChange={handleDateChange} 
+          onChange={handleDateChange}
           className={css.input}
           placeholder="Filter by event date"
         />
       </li>
 
-     
       <li className={css.filteredItem}>
         <p className={css.text}>Organizer</p>
         <input
           value={organizerFilter}
-          onChange={handleOrganizerChange} 
+          onChange={handleOrganizerChange}
           className={css.input}
           placeholder="Filter by organizer"
         />

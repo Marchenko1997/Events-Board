@@ -8,6 +8,8 @@ import { selectEventDetails } from "../../redux/events/selectors";
 import { selectUser } from "../../redux/auth/selectors";
 import { fetchEventById } from "../../redux/events/operations";
 import css from "./Register.module.css";
+import DatePicker from "react-datepicker"; 
+import "react-datepicker/dist/react-datepicker.css"; 
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -19,8 +21,10 @@ const Register = () => {
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors, isValid },
     reset,
+    watch,
   } = useForm({
     mode: "onTouched",
   });
@@ -28,6 +32,9 @@ const Register = () => {
   useEffect(() => {
     dispatch(fetchEventById(id));
   }, [dispatch, id]);
+
+ 
+  const birthDate = watch("birthDate");
 
   const registerParticipant = async (data) => {
     const { name, email, birthDate, answer } = data;
@@ -67,35 +74,62 @@ const Register = () => {
         <h2 className={css.registerText}>Event registration</h2>
         <div>
           <div className={css.inputWrap}>
-            <label>
+            <label className={css.label}>
               <input
                 className={css.input}
                 defaultValue={user && user.name}
                 type="text"
-                {...register("name", { required: true })}
-                placeholder="Adam"
+                {...register("name", {
+                  required: "Name is required",
+                  minLength: {
+                    value: 3,
+                    message: "Name must be at least 3 characters",
+                  },
+                })}
+                placeholder="Name"
               />
+              {errors.name && (
+                <span className={css.error}>{errors.name.message}</span>
+              )}
             </label>
-            <label>
+            <label className={css.label}>
               <input
                 className={css.input}
                 defaultValue={user && user.email}
                 type="email"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/,
+                    message: "Please enter a valid email address",
+                  },
+                })}
                 placeholder="email@gmail.com"
               />
-              {errors.email && <span> {errors.email.message}</span>}
+              {errors.email && (
+                <span className={css.error}>{errors.email.message}</span>
+              )}
             </label>
-            <label>
-              <input
+            <label className={css.label}>
+              <DatePicker
+                selected={birthDate}
+                onChange={(date) => setValue("birthDate", date)}
+                dateFormat="dd.MM.yyyy"
+                placeholderText="Select your birth date"
                 className={css.input}
-                defaultValue={user && user.birthDate}
-                type="date"
-                placeholder="08.08.1988"
-                min="1920-01-01"
-                max="2018-12-31"
-                {...register("birthDate", { required: true })}
+                {...register("birthDate", {
+                  required: "Birth date is required",
+                  validate: {
+                    range: (value) =>
+                      (new Date(value) >= new Date("1920-01-01") &&
+                        new Date(value) <= new Date("2018-12-31")) ||
+                      "Date of birth must be between 1920 and 2018",
+                  },
+                })}
               />
+              {errors.birthDate && (
+                <span className={css.error}>{errors.birthDate.message}</span>
+              )}
             </label>
           </div>
           <p className={css.registerQuestion}>How did you know about us?</p>
@@ -103,7 +137,7 @@ const Register = () => {
             <input
               type="radio"
               value="Social media"
-              {...register("answer", { required: true })}
+              {...register("answer", { required: "Please select an option" })}
             />
             Social media
           </label>
@@ -111,7 +145,7 @@ const Register = () => {
             <input
               type="radio"
               value="Friends"
-              {...register("answer", { required: true })}
+              {...register("answer", { required: "Please select an option" })}
             />
             Friends
           </label>
@@ -119,10 +153,13 @@ const Register = () => {
             <input
               type="radio"
               value="Found myself"
-              {...register("answer", { required: true })}
+              {...register("answer", { required: "Please select an option" })}
             />
             Found myself
           </label>
+          {errors.answer && (
+            <span className={css.error}>{errors.answer.message}</span>
+          )}
         </div>
         <button className={css.submitBtn} type="submit" disabled={!isValid}>
           Submit

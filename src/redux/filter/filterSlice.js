@@ -4,6 +4,8 @@ const initialState = {
   title: "",
   eventDate: "",
   organizer: "",
+  name: "", 
+  email: "", 
 };
 
 const filterSlice = createSlice({
@@ -19,10 +21,18 @@ const filterSlice = createSlice({
     setOrganizerFilter: (state, action) => {
       state.organizer = action.payload;
     },
+    setNameFilter: (state, action) => {
+      state.name = action.payload; 
+    },
+    setEmailFilter: (state, action) => {
+      state.email = action.payload; 
+    },
     clearFilters: (state) => {
       state.title = "";
       state.eventDate = "";
       state.organizer = "";
+      state.name = ""; 
+      state.email = ""; 
     },
   },
 });
@@ -31,7 +41,11 @@ export const {
   setTitleFilter,
   setDateFilter,
   setOrganizerFilter,
+  setNameFilter, 
+  setEmailFilter, 
   clearFilters,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;
+
+export const selectFilters = (state) => state.filters;

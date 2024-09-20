@@ -13,11 +13,22 @@
   margin-bottom: 10px;
 }
 
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .input {
   width: 320px;
   height: 40px;
   border-radius: 12px;
   padding: 0 15px;
+}
+
+.error {
+  color: rgb(209, 19, 19);
+  font-size: 14px;
 }
 
 .radioBtnLabel {
@@ -34,13 +45,13 @@
   font-size: 18px;
   font-weight: bold;
   color: black;
-  background-color: yellow;
+  background-color: var(--text-special-clr);
   cursor: pointer;
 }
 
 .submitBtn:disabled {
   background-color: lightgrey;
-  border: 1px solid black;
+  border: 1px solid var(--text-clr-black);
 }
 
 .returnBackBtn {
@@ -49,9 +60,9 @@
   margin-bottom: 20px;
   font-size: 20px;
   border-radius: 12px;
-  color: yellow;
+  color: var(--text-special-clr );
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid var(--text-clr-black);
 }
 
 .form {

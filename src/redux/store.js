@@ -24,11 +24,10 @@ const participantsPersistConfig = {
   whitelist: ["participants"],
 };
 
-
 const filterPersistConfig = {
   key: "filters",
   storage,
-  whitelist: ["title", "eventDate", "organizer"], 
+  whitelist: ["title", "eventDate", "organizer", "name", "email"], 
 };
 
 const rootReducer = combineReducers({

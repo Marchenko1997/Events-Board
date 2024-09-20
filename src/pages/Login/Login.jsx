@@ -6,7 +6,7 @@ import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 
 import togglePassword from "../../services/togglePassword";
 import { fetchUser, loginThunk } from "../../redux/auth/operations";
-import css from "./Login.module.css"; // Импорт CSS модуля
+import css from "./Login.module.css"; 
 import { failedNotification } from "../../services/notifications.js";
 
 const Login = () => {

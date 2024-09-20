@@ -7,7 +7,7 @@ import togglePassword from "../../services/togglePassword";
 import { writeUserData } from "../../services/authServices";
 import { registerThunk } from "../../redux/auth/operations";
 import { updateUser } from "../../redux/auth/authSlice";
-import css from "./SignUp.module.css"; // Импорт CSS модуля
+import css from "./SignUp.module.css"; 
 import { failedNotification } from "../../services/notifications";
 
 const SignUp = () => {

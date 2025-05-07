@@ -1,5 +1,7 @@
 ## About project:
 
+⚠️ **Attention!!!** Backend was deployed to render.com with free of charge plan. Can be delay about 50 seconds with first HTTP-request.
+
 The project was developed as part of a test assignment and is designed to provide users with detailed information on events occurring within the city. The application allows for efficient navigation through paginated event listings, supports advanced filtering options, and provides comprehensive details about each event, including participant information. Users can register for events of their choice and, upon authentication, gain access to a personalized dashboard showcasing the events they have signed up for.
 
 ## Preview
